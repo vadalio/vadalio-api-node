@@ -5,9 +5,6 @@
   "logo": "https://avatars3.githubusercontent.com/u/13032602?v=3&s=200",
   "image": "heroku/nodejs",
   "success_url": "/check",
-  "scripts": {
-    "postdeploy": "node ./fetch-fuctions.js"
-  },
   "env": {
     "MY_NAME": {
       "description": "A dumb variable name that needs to be overwritten",

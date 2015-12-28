@@ -1,6 +1,6 @@
 var fs    = require('fs')
 var path  = require('path')
-var http  = require('http')
+var https = require('https')
 
 var functions         = []
 var FUNCTIONS_FOLDER  = path.join(__dirname, 'functions')
@@ -16,7 +16,7 @@ function downloadFunction(url) {
   var urlParts = url.split('/')
   var filename = urlParts[urlParts.length - 1]
 
-  http.get(url, function(response) {
+  var request = https.get(url, function(response) {
     if (response.statusCode === 200) {
       var file = fs.createWriteStream(path.join(FUNCTIONS_FOLDER, filename))
       response.pipe(file)

@@ -6,7 +6,7 @@ var functions         = []
 var FUNCTIONS_FOLDER  = path.join(__dirname, 'functions')
 
 try {
-  functions = JSON.parse(process.env.FUNCTIONS_LIST)
+  functions = JSON.parse(process.env.FUNCTIONS_LIST).files
 } catch(e) {
   console.error('FUNCTIONS_LIST is not a valid JSON array')
   process.exit(1)

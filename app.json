@@ -9,6 +9,10 @@
     "MY_NAME": {
       "description": "A dumb variable name that needs to be overwritten",
       "value": "Greg"
+    },
+    "FUNCTIONS_LIST": {
+      "description": "List of functions to be fetched",
+      "value": "{\"files\": []}"
     }
   },
   "keywords": [
